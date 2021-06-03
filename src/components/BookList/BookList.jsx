@@ -1,20 +1,34 @@
 import { Component } from "react"
 import SingleBook from "../SingleBook/SingleBook"
-import { CardGroup, Col, Container, Form } from "react-bootstrap"
+import { CardGroup, Container, Form } from "react-bootstrap"
 
 class BookList extends Component {
   state = {
     filterQuery: "",
+    // filteredBooks: [],
   }
 
-  filterBookList = e => {
-    console.log(this.props.booksArr.filter(book => book.title.toLowerCase().includes(this.state.filterQuery)))
-  }
+  // filterBooks = () => {
+  //   const auxFilteredBooks = this.props.booksArr
+  //     .filter(book => book.title.toLowerCase().includes(this.state.filterQuery))
+  //     .map(el => <SingleBook key={"asin_" + el.asin} book={el} />)
+  //   this.setState({
+  //     filteredBooks: auxFilteredBooks.length ? (
+  //       auxFilteredBooks
+  //     ) : (
+  //       <Alert className="align-self-center m-0 justify-self-center" variant="danger">
+  //         No results :(
+  //       </Alert>
+  //     ),
+  //   })
+
+  //   console.log(this.state.filteredBooks)
+  // }
 
   render() {
     return (
       <Container fluid="md">
-        <Form className="d-flex justify-content-center my-5">
+        <Form className="d-flex justify-content-center mt-4">
           <Form.Group className="m-0">
             <Form.Control
               type="text"
@@ -22,21 +36,18 @@ class BookList extends Component {
               value={this.state.filterQuery}
               onChange={e => {
                 this.setState({ filterQuery: e.target.value.toLowerCase() })
-                if (this.state.filterQuery.length > 2) this.filterBookList()
+                // console.log(this.state.filterQuery)
+                // this.filterBooks()
               }}
             />
           </Form.Group>
-
-          {/* <Button className="ml-2" variant="primary" type="submit">
-            Submit
-          </Button> */}
         </Form>
-        <CardGroup className="my-4">
-          {this.props.booksArr.slice(0, 10).map(el => (
-            <Col key={"asin_" + el.asin} sm={6} md={4} lg={3}>
-              <SingleBook book={el} />
-            </Col>
-          ))}
+        <CardGroup className="my-4 justify-content-center">
+          {this.state.filterQuery.length > 2
+            ? this.props.booksArr
+                .filter(book => book.title.toLowerCase().includes(this.state.filterQuery))
+                .map(el => <SingleBook key={"asin_" + el.asin} book={el} />)
+            : this.props.booksArr.map(el => <SingleBook key={"asin_" + el.asin} book={el} />)}
         </CardGroup>
       </Container>
     )
