@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import WarningSign from "../WarningSign/WarningSign"
-import MyBadge from "../MyBadge/MyBadge"
+import MyNav from "../MyNav/MyNav"
+import MyFooter from "../MyFooter/MyFooter"
 import CategoriesTabs from "../CategoriesTabs/CategoriesTabs"
-// import BookList from "../BookList/BookList"
+
 import fantasyBooks from "../../data/fantasy.json"
 import historyBooks from "../../data/history.json"
 import horrorBooks from "../../data/horror.json"
@@ -15,10 +15,9 @@ const books = [fantasyBooks, historyBooks, horrorBooks, romanceBooks, scifiBooks
 function App() {
   return (
     <div className="App">
-      <WarningSign message="Hello World!" />
-      <MyBadge text="Hello there!" color="dark" />
+      <MyNav />
       <CategoriesTabs categories={categoriesArr} allBooks={books} />
-      {/* <BookList booksArr={fantasyBooks} /> */}
+      <MyFooter />
     </div>
   )
 }

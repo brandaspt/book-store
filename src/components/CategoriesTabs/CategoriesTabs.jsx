@@ -1,5 +1,6 @@
 import { Component } from "react"
 import { Tabs, Tab } from "react-bootstrap"
+import "./CategoriesTabs.css"
 import BookList from "../BookList/BookList"
 
 class CategoriesTabs extends Component {

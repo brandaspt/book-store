@@ -6,3 +6,17 @@
   transform: scale(1.05);
   box-shadow: 0 0 10px black;
 }
+
+.comment-area {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 56px;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
