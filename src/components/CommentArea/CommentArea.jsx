@@ -41,7 +41,10 @@ class CommentArea extends Component {
       })
       console.log(response)
       const data = await response.json()
-      this.setState({ isLoading: false })
+      this.setState({
+        comments: [...this.state.comments, data],
+        isLoading: false,
+      })
       console.log(data)
     } catch (error) {
       console.log(error)
@@ -71,7 +74,15 @@ class CommentArea extends Component {
     }
   }
 
-  componentDidMount = async () => {
+  componentDidMount = () => {
+    this.fetchComments()
+  }
+
+  componentDidUpdate = prevProps => {
+    if (this.props.book.asin !== prevProps.book.asin) this.fetchComments()
+  }
+
+  fetchComments = async () => {
     const asin = this.props.book.asin
     const response = await fetch(URL + asin, {
       headers: {
@@ -87,18 +98,18 @@ class CommentArea extends Component {
     return (
       <>
         <Alert className="text-center fs-4" variant="info">
-          <h4>Reviews for: {this.props.book.title}</h4>
+          <p className="m-0">Reviews for: {this.props.book.title}</p>
         </Alert>
         {this.state.isLoading && <Spinner animation="border" variant="info" />}
         <ListGroup>
           {this.state.comments.length === 0 ? (
-            <Alert className="text-center" variant="warning">
+            <Alert className="text-center mx-auto" variant="danger">
               No reviews
             </Alert>
           ) : (
             this.state.comments.map(comment => (
-              <ListGroup.Item key={comment._id}>
-                <p>
+              <ListGroup.Item className="px-0" key={comment._id}>
+                <p className="m-0">
                   <strong>Comment: </strong>
                   {comment.comment}
                 </p>
@@ -137,7 +148,7 @@ class CommentArea extends Component {
             <Form.Control id="rate" type="number" min={1} max={5} value={this.state.newComment.rate} onChange={this.handleInput} />
           </Form.Group>
           <div className="d-flex justify-content-start align-items-center">
-            <Button variant="primary" type="submit">
+            <Button className="mx-auto" variant="primary" type="submit">
               Submit
             </Button>
             {this.state.isLoading && <Spinner animation="border" variant="info" />}

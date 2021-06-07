@@ -16,7 +16,9 @@ function App() {
   return (
     <div className="App">
       <MyNav />
-      <CategoriesTabs categories={categoriesArr} allBooks={books} />
+      <main>
+        <CategoriesTabs categories={categoriesArr} allBooks={books} />
+      </main>
       <MyFooter />
     </div>
   )
