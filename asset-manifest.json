@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/book-store/static/css/main.abf83d18.chunk.css",
+    "main.js": "/book-store/static/js/main.b60f0ea1.chunk.js",
+    "main.js.map": "/book-store/static/js/main.b60f0ea1.chunk.js.map",
+    "runtime-main.js": "/book-store/static/js/runtime-main.fea83e80.js",
+    "runtime-main.js.map": "/book-store/static/js/runtime-main.fea83e80.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/book-store/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.2feee6b3.chunk.js": "/book-store/static/js/2.2feee6b3.chunk.js",
+    "static/js/2.2feee6b3.chunk.js.map": "/book-store/static/js/2.2feee6b3.chunk.js.map",
+    "index.html": "/book-store/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/book-store/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.abf83d18.chunk.css.map": "/book-store/static/css/main.abf83d18.chunk.css.map",
+    "static/js/2.2feee6b3.chunk.js.LICENSE.txt": "/book-store/static/js/2.2feee6b3.chunk.js.LICENSE.txt",
+    "static/media/rbsLogo.958e7d84.svg": "/book-store/static/media/rbsLogo.958e7d84.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fea83e80.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.2feee6b3.chunk.js",
+    "static/css/main.abf83d18.chunk.css",
+    "static/js/main.b60f0ea1.chunk.js"
+  ]
+}
