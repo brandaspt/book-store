@@ -22,24 +22,20 @@ Book Store project undertaken during Strive School's Full Stack Developer Course
 
 ## Setup
 
-- [Live Demo](https://brandaspt.github.io/M1Benchmark/)
-- [Source Code](https://github.com/brandaspt/book-store)
+- [Live Demo](https://brandaspt.github.io/book-store/)
+- [Source Code](https://github.com/brandaspt/book-store/)
 
 ## Features
 
-- DOM Manipulation
+- Book comments
 - HTTP Requests
 - Async await
+- Filter by category
+- Search for books
 
 ## Status
 
-Project is: _in progress_.
-
-To Do:
-
-- Choose number of questions
-- Choose difficulty
-- Show overall answer accuracy
+Project is: _finished_.
 
 ## Contact
 
