@@ -4,8 +4,7 @@ import AddComment from "../AddComment/AddComment"
 import CommentList from "../CommentList/CommentList"
 
 const URL = "https://striveschool-api.herokuapp.com/api/comments/"
-const TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlNTk2NGNlYWY0ODAwMTVjOTE5MzYiLCJpYXQiOjE2MjIwMzg4ODQsImV4cCI6MTYyMzI0ODQ4NH0.kcSw_K1mFlUoMMV0Ht3yenaWNHGapnpFfnPfWPee6cU"
+const TOKEN = process.env.REACT_APP_API_TOKEN
 
 class CommentArea extends Component {
   state = {
