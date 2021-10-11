@@ -1,6 +1,6 @@
 # Project Name
 
-> Book Store React
+> Book Store React - Class Components
 
 ## Table of contents
 
